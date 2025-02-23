@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ramadan Mubarak</title>
+    <link rel="stylesheet" href="tryStyle.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <div class="center-content">
+            <button id="popupBtn">Click Me</button>
+            
+         
+
+           
+        </div>
+        <p id="text">HeartFelt Greetings</p>
+        
+        <div class="balloon-container">
+            <img src="wishball.png" alt="balloon" class="balloon">
+        </div>
+
+    </div>
+ <div class="calendar-container">
+    <table class="calendar">
+      <thead>
+        <tr>
+          <th>Sun</th>
+          <th>Mon</th>
+          <th>Tue</th>
+          <th>Wed</th>
+          <th>Thu</th>
+          <th>Fri</th>
+          <th>Sat</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Calendar days will go here -->
+      </tbody>
+    </table>
+  </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let button = document.getElementById("popupBtn");
+            let textElement = document.getElementById("text");
+            let balloons = document.querySelectorAll(".balloon");
+
+            button.addEventListener("click", function() {
+                if (button.id === "popupBtn") {
+                    textElement.innerHTML = "RAMADAN MUBARAK";
+                    textElement.classList.add("highlight-text");
+                    button.id = "changedButton";
+
+                    // Make all balloons fly at the same time
+                    balloons.forEach(balloon => {
+                        balloon.classList.add("fly-animation");
+                    });
+
+                } else {
+                    textElement.innerHTML = "HeartFelt Greetings";
+                    textElement.classList.remove("highlight-text");
+                    button.id = "popupBtn";
+
+                    // Reset balloon position
+                    balloons.forEach(balloon => {
+                        balloon.classList.remove("fly-animation");
+                    });
+                }
+            });
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

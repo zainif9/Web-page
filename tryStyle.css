@@ -1,0 +1,122 @@
+body {
+    background: linear-gradient(to right,#B5828C , #FFCDB2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    flex-direction: column;
+}
+
+.container {
+    text-align: center;
+    position: relative;
+}
+
+.center-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* Space between button and moon */
+    position: relative;
+    z-index: 10;
+}
+
+button {
+    padding: 10px 22px;
+    font-size: 20px;
+    position: absolute;
+top:  140px;
+    background-color: #ac67a8;
+    color: rgb(243, 243, 243);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #987D9A;
+}
+
+.moon {
+    width: 100px;
+    height: auto;
+}
+#text {
+    color: #0c0c0c; /* Aesthetically pleasing color */
+    font-weight: bold; /* Make it bold */
+    position: relative;
+    top: 200px; /* Move it downwards */
+  }
+  
+
+.balloon {
+    width: 150px;
+    height: auto;
+    position:relative;
+    left: 170px;
+    bottom:  -3px;
+    width: 200px; /* Adjust the width as needed */
+    height: 200px; /* Adjust the height as needed */
+}
+
+.calendar-container {
+    background-color: #D8B4F8;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  .calendar {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .calendar th {
+    background-color: #FFC7EA;
+    border: 1px solid #836096 ;
+    color: #836096;
+    padding: 3px;
+  }
+  
+  .calendar td {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    padding: 3px;
+    border: 1px solid #836096;
+  }
+  
+  .calendar td.today {
+    background-color: #feec37;
+    color: #000;
+  }
+  
+.highlight-text {
+    font-size: 30px;
+    font-weight: bold;
+    color: #d83eec;
+    animation: sparkle 1s infinite alternate;
+}
+
+
+
+@keyframes sparkle {
+    0% {
+        text-shadow: 0 0 5px #FFD1E3, 0 0 10px #8644A2, 0 0 15px #FFD1E3, 0 0 20px #8644A2;
+    }
+    100% {
+        text-shadow: 0 0 20px #e8eb55, 0 0 30px #feec37, 0 0 40px #dce654, 0 0 50px #feec37;
+    }
+}
+
+/* Balloons fly all together when button is clicked */
+.fly-animation {
+    animation: fly 3s linear forwards;
+}
+
+@keyframes fly {
+    0% { bottom: 0; }
+    100% { bottom: 100vh; }
+}

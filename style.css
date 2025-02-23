@@ -1,0 +1,78 @@
+
+body {
+    background: linear-gradient(to right, #9aaef0, #ee74a7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    text-align: center;
+}
+
+.ballon {
+    width: 200px;
+    height: auto;
+    display: table-column-group;
+    margin: 20px auto;
+    position: relative;
+    bottom: 0;
+    animation: fly 10s infinite;
+    transition: bottom 2s;
+}
+.wishb {
+    width: 100px;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    position: relative;
+    bottom: 0;
+    animation: fly 10s infinite;
+    transition: bottom 2s;
+}
+
+.moon {
+    width: 100px;
+    height: auto;
+    display: block;
+    margin-left: 20px;
+}
+
+button {
+    align-content: center;
+    padding: 10px 22px;
+    font-size: 20px;
+    background-color: #ec6981;
+    color: rgb(243, 243, 243);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ac67a8;
+}
+
+.highlight-text {
+    font-size: 30px;
+    font-weight: bold;
+    color: #9623a5;
+    animation: sparkle 1s infinite alternate;
+}
+
+@keyframes sparkle {
+    0% {
+        text-shadow: 0 0 5px #9a9fe4, 0 0 10px #9aa9fa, 0 0 15px #c66dc9, 0 0 20px #6ba6f3;
+    }
+    100% {
+        text-shadow: 0 0 20px #e8eb55, 0 0 30px #f365e7, 0 0 40px #dce654, 0 0 50px #f35bae;
+    }
+}
+
+@keyframes fly {
+    0% { bottom: 0; }
+    100% { bottom: 100%; }
+}
